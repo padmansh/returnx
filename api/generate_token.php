@@ -88,7 +88,7 @@ if (hash_equals($hmac, $computed_hmac)) {
     if($response === FALSE){
     };
     $response = json_decode($response, true);
-    if($response["statusCode"] === 400){
+    if(isset($response["statusCode"]) && $response["statusCode"] === 400){
         // User creation failed
         // If user creation failed because of already existing user, then redirect to login
 

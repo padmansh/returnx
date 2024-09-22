@@ -7,7 +7,7 @@ $shop = $_GET['shop'];
 $cutUrl = substr($shop, 0, -14);
 
 // Base URL for redirection
-$redirectUrl = "https://installs.returnx.io/install.php?shop=" . urlencode($cutUrl);
+$redirectUrl = "https://returnx.vercel.app/api/install.php?shop=" . urlencode($cutUrl);
 
 // Check if 'rxref' parameter is set and append it if it exists
 if (isset($_GET['rxref'])) {
